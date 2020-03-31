@@ -1,0 +1,102 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fondo {
+    background-color: #0C1116;
+}
+
+#globalArea {
+    height: 50vh;
+}
+
+#img_pais {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    #img_pais {
+        width: 40px;
+        height: 40px;
+    }
+    .row p{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.neumorphism{
+    border-radius: 27px;
+background: #0C1116;
+box-shadow:  7px 7px 17px #070a0d, 
+             -7px -7px 17px #11181f;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.neumorphism:hover {
+    border-radius: 16px;
+background: #0C1116;
+box-shadow: inset 7px 7px 14px #06090c, 
+            inset -7px -7px 14px #121920;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h5, p {
+    color: aqua;
+    font-family: 'Comic Neue', cursive;
+    padding-top: 0.5rem;
+}
+
+select, option {
+    border-radius: 16px;
+background: #0C1116;
+}
+
+footer {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+#bandera {
+    margin: auto;
+}
+
+#info_pais {
+    margin: auto;
+}
+
+#est_mundial, #est_pais{
+    margin-top: 0.5rem;
+    text-align: right;
+    font-size: 1rem;
+    color: white;
+}
+
+.row:last-child{
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.row{
+    text-align: center;
+}
+
+
+footer p{
+    color: white;
+}
+
+#titulo {
+    text-align: right;
+    font-size: 1rem;
+    font-style: normal;
+    color: white;
+}

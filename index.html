@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas COVID-19</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="fondo">
+    <div class="container my-2">
+        <h5 id="titulo">ESTADÍSTICAS COVID-19</h5>
+        <div id="globalArea">
+            
+        </div>
+        <div id="contenedor_pais">
+            <div class="row">
+                <div id="bandera" class="col-2">
+                    <img src="" id="img_pais" class="neumorphism">
+                </div>
+                <div id="info_pais" class="col-10">
+                    <select id="nombre_pais" class="custom-select neumorphism">
+                        <option value="" disabled selected>Seleccione el pais</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 class="col-12" id="est_pais">Estadística Por País</h5>
+            <div class="neumorphism col rounded-lg">
+                <div class="">
+                    <h5 class="">Confirmados</h5>
+                    <p class="" id="confirmados_pais">--</p>
+                </div>
+            </div>
+            <div class="neumorphism col rounded-lg">
+                <div class="">
+                    <h5 class="">Recuperados</h5>
+                    <p class="" id="recuperados_pais">--</p>
+                </div>
+            </div>
+            <div class="neumorphism col rounded-lg">
+                <div class="">
+                    <h5 class="">Muertes</h5>
+                    <p class="" id="muertes_pais">--</p>
+                    
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="row">
+            <h5 class="col-12" id="est_mundial">Estadística Mundial</h5>
+            <div class="neumorphism col rounded-lg">
+                <div class="">
+                    <h5 class="">Confirmados</h5>
+                    <p class="" id="confirmados_total">--</p>
+                </div>
+            </div>
+            <div class="neumorphism col rounded-lg">
+                <div class="">
+                    <h5 class="">Recuperados</h5>
+                    <p class="" id="recuperados_total">--</p>
+                </div>
+            </div>
+            <div class="neumorphism col rounded-lg">
+                <div class="">
+                    <h5 class="">Muertes</h5>
+                    <p class="" id="muertes_total">--</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p id="actualizacion"></p>
+        </div>
+    </div>
+    <footer class="footer mt-auto">
+        <div class="container">
+            <p>Fuente de datos
+                <a href="https://github.com/mathdroid/covid-19-api" target="_blank">COVID-19 API</a>
+                | Desarrollado por Diego Becerra | becerradiego94@gmail.com | 2020
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/giojs@2.2.1/build/gio.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Mis JS-->
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
