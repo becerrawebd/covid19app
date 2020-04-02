@@ -15,16 +15,6 @@ function addEventListeners(){
 addEventListeners();
 
 
-function seleccionarPaisPickeado(paisPickeado){
-    const opciones = selectPaises.querySelectorAll('option')
-    opciones.forEach(opcion => {
-        if(opcion.getAttribute('data-iso2')===paisPickeado.ISOCode){
-            opcion.selected = true;
-        }
-    })
-    procesarPais()
-}
-
 function inicializarDOM(){
     const jsonPaises = 'https://covid19.mathdro.id/api/countries/';
     const jsonMundial = 'https://covid19.mathdro.id/api/';
@@ -40,9 +30,18 @@ function inicializarDOM(){
         .then( data => {
             const {datos} = data
             ui.llenarCards(datos,'confirmados_total','recuperados_total','muertes_total');
-            ultimaActualizacion(datos.lastUpdate)
         })
         .catch( error => console.log(error))
+}
+
+function seleccionarPaisPickeado(paisPickeado){
+    const opciones = selectPaises.querySelectorAll('option')
+    opciones.forEach(opcion => {
+        if(opcion.getAttribute('data-iso2')===paisPickeado.ISOCode){
+            opcion.selected = true;
+        }
+    })
+    procesarPais()
 }
 
 function procesarPais(){
@@ -55,6 +54,7 @@ function procesarPais(){
         .then( data => {
             const { datos } = data;
             ui.llenarCards(datos,'confirmados_pais','recuperados_pais','muertes_pais');
+            ultimaActualizacion(datos.lastUpdate)
         })
         .catch( error => console.log(error))
 }

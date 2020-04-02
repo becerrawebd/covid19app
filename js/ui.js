@@ -6,14 +6,23 @@ class UI {
 
     inicializarGlobo() {
         var container = document.getElementById("globalArea");
-        var controller = new GIO.Controller(container);
-        var colorPrimario = "#00ffff"
-        controller.setSurfaceColor(colorPrimario);
-        controller.setSelectedColor(colorPrimario);
-        controller.setHaloColor(colorPrimario);
-        controller.adjustOceanBrightness(0.3);
-        controller.setTransparentBackground(true);
-        controller.setInitCountry("AR");
+        const colorPrimario = '#00ffff';
+        var configs = {
+            control: {
+                initCountry: "AR",
+                halo: true,
+                transparentBackground: true,
+            },
+            color: {
+                halo: colorPrimario,
+                surface: colorPrimario,
+                selected: colorPrimario,
+            },
+            brightness: {
+                ocean: 0.9
+            }
+        }
+        var controller = new GIO.Controller(container,configs);
         controller.init();
         return controller
     }
