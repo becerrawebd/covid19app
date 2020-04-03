@@ -50,12 +50,20 @@ class UI {
     }
 
     llenarCards(datos, idConfirmados, idRecuperados, idMuertes) {
-        const confirmados = document.querySelector(`#${idConfirmados}`);
-        const recuperados = document.querySelector(`#${idRecuperados}`);
-        const muertes = document.querySelector(`#${idMuertes}`);
-        confirmados.textContent = new Intl.NumberFormat('es').format(datos.confirmed.value)
-        recuperados.textContent = new Intl.NumberFormat('es').format(datos.recovered.value);
-        muertes.textContent = new Intl.NumberFormat('es').format(datos.deaths.value);
+        const { confirmed, recovered, deaths } = datos;
+        const confirmados = document.querySelector(`#${idConfirmados} p`);
+        const recuperados = document.querySelector(`#${idRecuperados} p`);
+        const muertes = document.querySelector(`#${idMuertes} p`);
+        const porcentajeConfirmados = document.querySelector(`#${idConfirmados} h5 span`)
+        const porcentajeRecuperados = document.querySelector(`#${idRecuperados} h5 span`)
+        const porcentajeMuertes = document.querySelector(`#${idMuertes} h5 span`)
+        confirmados.textContent = new Intl.NumberFormat('es').format(confirmed.value)
+        recuperados.textContent = new Intl.NumberFormat('es').format(recovered.value);
+        muertes.textContent = new Intl.NumberFormat('es').format(deaths.value);
+        porcentajeConfirmados.textContent = '(100%)';
+        porcentajeRecuperados.textContent = `(${(recovered.value*100/confirmed.value).toFixed(1)}%)`;
+        porcentajeMuertes.textContent = `(${(deaths.value*100/confirmed.value).toFixed(1)}%)`; 
+        
     }
 
 }
